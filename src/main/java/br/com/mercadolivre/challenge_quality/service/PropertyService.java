@@ -7,6 +7,7 @@ import br.com.mercadolivre.challenge_quality.exception.DistrictNotFoundException
 import br.com.mercadolivre.challenge_quality.repository.DistrictRepository;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -41,7 +42,7 @@ public class PropertyService {
 
         dto.setName(propertyDto.getProp_name());
         dto.setTotalMetroQuadrado(totCalculateSquareMeter);
-        dto.setTotalMetroQuadrado(totCalculateSquareMeter * district.getValue());
+        dto.setValorTotal(new BigDecimal(totCalculateSquareMeter * district.getValue()));
 
         return dto;
     }
