@@ -32,39 +32,20 @@ public class ErrorMessage {
         return message;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
     public HttpStatus getStatus() {
         return status;
-    }
-
-    public void setStatus(HttpStatus status) {
-        this.status = status;
     }
 
     public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
     public Map<String, String> getMessages() {
         return messages;
-    }
-
-    public void setMessages(Map<String, String> messages) {
-        this.messages = messages;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
