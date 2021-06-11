@@ -26,10 +26,6 @@ public class TotSquareMeter {
         return totSquareMeter;
     }
 
-    public void setTotSquareMeter(Double totSquareMeter) {
-        this.totSquareMeter = totSquareMeter;
-    }
-
     public BigDecimal getValorTotal() {
         return valorTotal;
     }

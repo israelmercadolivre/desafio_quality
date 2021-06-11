@@ -56,7 +56,7 @@ public class PropertyService {
 
 
     private Map.Entry<String, Double> verifyDistrict(String district){
-        return  this.districtRepository.findByName(district)
+        return this.districtRepository.findByName(district)
                 .orElseThrow(()->  new DistrictNotFoundException(String.format(NOT_FOUND_DISTRICT, district)));
     }
 
@@ -68,8 +68,8 @@ public class PropertyService {
     }
 
     public List<RoomDto> calculateSquareMeterRoom(PropertyDto propertyDto) {
-        List<RoomDto> dto = new ArrayList<>();
         this.verifyDistrict(propertyDto.getProp_district());
+        List<RoomDto> dto = new ArrayList<>();
         propertyDto.getRooms().stream().forEach(r -> dto.add(
                 new RoomDto(
                         r.getRoom_name(),

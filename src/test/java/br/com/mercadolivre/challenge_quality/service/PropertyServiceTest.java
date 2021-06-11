@@ -1,10 +1,10 @@
-package br.com.mercadolivre.challenge_quality.unit.service;
+package br.com.mercadolivre.challenge_quality.service;
 
 import br.com.mercadolivre.challenge_quality.dto.PropertyDto;
 import br.com.mercadolivre.challenge_quality.dto.RoomDto;
 import br.com.mercadolivre.challenge_quality.dto.TotSquareMeter;
 import br.com.mercadolivre.challenge_quality.exception.DistrictNotFoundException;
-import br.com.mercadolivre.challenge_quality.unit.repository.DistrictRepository;
+import br.com.mercadolivre.challenge_quality.repository.DistrictRepository;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

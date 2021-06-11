@@ -1,4 +1,4 @@
-package br.com.mercadolivre.challenge_quality.unit.repository;
+package br.com.mercadolivre.challenge_quality.repository;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;

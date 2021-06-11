@@ -63,10 +63,6 @@ public class RoomDto {
         return squareMeter;
     }
 
-    public void setSquareMeter(Double squareMeter) {
-        this.squareMeter = squareMeter;
-    }
-
     public Double calculateSquareMeter(){
         return this.getRoom_width() * this.getRoom_length();
     }
