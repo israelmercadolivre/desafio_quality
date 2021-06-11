@@ -1,3 +1,8 @@
+# **Execute application**
+Open the package of project on any terminal and run:
+
+mvn spring-boot:run
+
 # **Bairros permitidos**
     -   ALPHAVILLE
     -   BELEM
