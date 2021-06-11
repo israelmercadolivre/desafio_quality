@@ -5,14 +5,16 @@ import br.com.mercadolivre.challenge_quality.dto.RoomDto;
 import br.com.mercadolivre.challenge_quality.dto.TotSquareMeter;
 import br.com.mercadolivre.challenge_quality.exception.DistrictNotFoundException;
 import br.com.mercadolivre.challenge_quality.repository.DistrictRepository;
+import br.com.mercadolivre.challenge_quality.util.Util;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+
+import static br.com.mercadolivre.challenge_quality.util.Util.*;
 import static org.mockito.Mockito.mock;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -22,15 +24,7 @@ import static org.mockito.Mockito.when;
 
 class PropertyServiceTest {
 
-    private static final String SALA = "Sala";
-    private static final String COZINHA = "Cozinha";
-    private static final String BANHEIRO = "Banheiro";
-    private static final double SALA_LENGTH = 20d;
-    private static final double SALA_WIDTH = 11d;
-    private static final double COZINHA_LENGTH = 15d;
-    private static final double COZINHA_WIDTH = 11d;
-    private static final double BANHEIRO_LENGTH = 10d;
-    private static final double BANHEIRO_WIDTH = 6d;
+
     private static PropertyService service;
     @Mock
     private static DistrictRepository repository;
@@ -39,7 +33,7 @@ class PropertyServiceTest {
 
     @BeforeAll
     public static void setUp(){
-        dto = generatePropertyDtoValid();
+        dto = Util.generatePropertyDtoValid();
         repository = mock(DistrictRepository.class);
         service = new PropertyService(repository);
     }
@@ -110,16 +104,4 @@ class PropertyServiceTest {
         assertEquals(60, result.get(2).getSquareMeter());
     }
 
-    private static PropertyDto generatePropertyDtoValid(){
-        PropertyDto dto = new PropertyDto();
-        dto.setProp_name("Casa Teste");
-        dto.setProp_district("VILA OLIMPIA");
-
-        RoomDto roomDto1 = new RoomDto(SALA, SALA_LENGTH, SALA_WIDTH);
-        RoomDto roomDto2 = new RoomDto(COZINHA, COZINHA_LENGTH, COZINHA_WIDTH);
-        RoomDto roomDto3 = new RoomDto(BANHEIRO, BANHEIRO_LENGTH, BANHEIRO_WIDTH);
-        dto.setRooms(Arrays.asList(roomDto1, roomDto2, roomDto3));
-
-        return dto;
-    }
 }

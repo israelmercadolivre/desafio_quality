@@ -31,7 +31,6 @@ class DistrictRepositoryTest {
     public void shouldNotFindDistrictWithNamesInvalid(String name){
         Optional<Map.Entry<String, Double>> district = districtRepository.findByName(name);
         assertTrue(district.isEmpty());
-
     }
 
     @ParameterizedTest

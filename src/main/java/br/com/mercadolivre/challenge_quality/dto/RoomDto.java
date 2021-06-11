@@ -11,16 +11,16 @@ import javax.validation.constraints.Size;
 
 @Validated
 public class RoomDto {
-    @NotNull(message = "O campo não pode estar vazio.")
-    @NotBlank(message = "O campo não pode estar vazio.")
-    @Pattern(regexp = "^[A-Z][A-Za-z ]*$" , message = "O nome do cômodo deve começar com uma letra maiúscula.")
-    @Size(max = 30, message = "O comprimento do cômodo não pode exceder 30 caracteres.")
+    @NotNull(message = "O nome do comodo nao pode estar vazio.")
+    @NotBlank(message = "O nome do comodo nao pode estar vazio.")
+    @Pattern(regexp = "^[A-Z][A-Za-z ]*$" , message = "O nome do comodo deve comecar com uma letra maiuscula.")
+    @Size(max = 30, message = "O comprimento do comodo nao pode exceder 30 caracteres.")
     private String room_name;
-    @NotNull(message = "A largura do cômodo não pode estar vazia")
-    @Range(min = 1, max = 25, message = "A largura máxima permitida por cômodo é de 25 metros")
+    @NotNull(message = "A largura do comodo nao pode estar vazia.")
+    @Range(min = 1, max = 25, message = "A largura maxima permitida por comodo e de 25 metros.")
     private Double room_width;
-    @NotNull(message = "O comprimento do cômodo não pode estar vazio.")
-    @Range(min = 1, max = 33, message = "O comprimento máximo permitido por cômodo é de 33 metros.")
+    @NotNull(message = "O comprimento do comodo nao pode estar vazio.")
+    @Range(min = 1, max = 33, message = "O comprimento maximo permitido por comodo e de 33 metros.")
     private Double room_length;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Double squareMeter;
@@ -32,31 +32,19 @@ public class RoomDto {
         this.room_name = room_name;
         this.room_length = room_length;
         this.room_width = room_width;
-        this.squareMeter = this.calculateSquareMeter();
+        if(room_length != null && room_width != null) this.squareMeter = this.calculateSquareMeter();
     }
 
     public String getRoom_name() {
         return room_name;
     }
 
-    public void setRoom_name(String room_name) {
-        this.room_name = room_name;
-    }
-
     public Double getRoom_width() {
         return room_width;
     }
 
-    public void setRoom_width(Double room_width) {
-        this.room_width = room_width;
-    }
-
     public Double getRoom_length() {
         return room_length;
-    }
-
-    public void setRoom_length(Double room_length) {
-        this.room_length = room_length;
     }
 
     public Double getSquareMeter() {

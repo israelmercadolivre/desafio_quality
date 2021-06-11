@@ -3,24 +3,25 @@ package br.com.mercadolivre.challenge_quality.dto;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.List;
 
 @Validated
 public class PropertyDto {
-    @NotNull(message = "O nome da propriedade não pode estar vazio.")
-    @NotBlank(message = "O nome da propriedade não pode estar vazio.")
-    @Pattern(regexp = "^[A-Z][A-Za-z ]*$" , message = "O nome da propriedade deve começar com uma letra maiúscula.")
-    @Size(max = 30, message = "TO comprimento do nome não pode exceder 30 caracteres.")
+    @NotNull(message = "O nome da propriedade nao pode estar vazio.")
+    @NotBlank(message = "O nome da propriedade nao pode estar vazio.")
+    @Size(max = 30, message = "O comprimento do nome nao pode exceder 30 caracteres.")
+    @Pattern(regexp = "^[A-Z][A-Za-z ]*$" , message = "O nome da propriedade deve comecar com uma letra maiuscula.")
     private String prop_name;
-    @NotNull(message = "O bairro não pode estar vazio.")
-    @NotBlank(message = "O bairro não pode estar vazio.")
-    @Size(max = 45, message = "O comprimento do bairro não pode exceder 45 caracteres.")
+
+    @NotNull(message = "O bairro nao pode estar vazio.")
+    @NotBlank(message = "O bairro nao pode estar vazio.")
+    @Size(max = 45, message = "O comprimento do bairro nao pode exceder 45 caracteres.")
     private String prop_district;
+
     @Valid
+    @NotNull(message = "Rooms nao pode estar vazio.")
+    @NotEmpty(message = "Rooms nao pode estar vazio.")
     private List<RoomDto> rooms;
 
     public String getProp_name() {
