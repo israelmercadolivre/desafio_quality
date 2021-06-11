@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "1b925ea8-a188-40ce-a784-4f2645e9ff55",
+		"name": "Desafio_Quality",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "areaTotalCasa - USS001",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prop_name\" : \"Casa teste\",\n    \"prop_district\" : \"Vila Olimpia\",\n    \"rooms\" : [\n            {\n                \"room_name\":\"Sala\",\n                \"room_width\" : 20,\n                \"room_length\" : 5\n            },\n             {\n                \"room_name\":\"Cozinha\",\n                \"room_width\" : 4,\n                \"room_length\" : 7\n            }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/areaTotalCasa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"areaTotalCasa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valor - USS002",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prop_name\" : \"Casa teste\",\n    \"prop_district\" : \"Vila Olimpia\",\n    \"rooms\" : [\n            {\n                \"room_name\":\"Sala\",\n                \"room_width\" : 20,\n                \"room_length\" : 5\n            },\n             {\n                \"room_name\":\"Cozinha\",\n                \"room_width\" : 4,\n                \"room_length\" : 7\n            }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/valor",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"valor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "maiorComodo - USS003",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prop_name\" : \"Casa teste\",\n    \"prop_district\" : \"Vila Olimpia\",\n    \"rooms\" : [\n            {\n                \"room_name\":\"Sala\",\n                \"room_width\" : 20,\n                \"room_length\" : 5\n            },\n             {\n                \"room_name\":\"Cozinha\",\n                \"room_width\" : 4,\n                \"room_length\" : 7\n            }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/valor",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"valor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "areaTotalComodo - USS004",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prop_name\" : \"Casa teste\",\n    \"prop_district\" : \"Vila Olimpia\",\n    \"rooms\" : [\n            {\n                \"room_name\":\"Sala\",\n                \"room_width\" : 20,\n                \"room_length\" : 5\n            },\n             {\n                \"room_name\":\"Cozinha\",\n                \"room_width\" : 4,\n                \"room_length\" : 7\n            }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/valor",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"valor"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
