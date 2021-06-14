@@ -1,5 +1,6 @@
-package br.com.mercadolivre.challenge_quality.controller;
+package br.com.mercadolivre.challenge_quality.integration.controller;
 
+import br.com.mercadolivre.challenge_quality.controller.PropertyController;
 import br.com.mercadolivre.challenge_quality.dto.PropertyDto;
 import br.com.mercadolivre.challenge_quality.dto.RoomDto;
 import br.com.mercadolivre.challenge_quality.dto.TotSquareMeter;

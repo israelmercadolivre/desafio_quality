@@ -1,5 +1,6 @@
-package br.com.mercadolivre.challenge_quality.repository;
+package br.com.mercadolivre.challenge_quality.unit.repository;
 
+import br.com.mercadolivre.challenge_quality.repository.DistrictRepository;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
